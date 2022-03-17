@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import TagPillsContainer from './components/TagsBar/TagPillsContainer';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Tarin's Space 👨‍💻</h1>
+        <h2>Just a regular guy with his regular personal blog.</h2>
       </header>
+      <main className='main-box-container'>
+        <TagPillsContainer />
+      </main>
     </div>
   );
 }
