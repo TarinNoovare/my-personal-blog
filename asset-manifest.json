@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/my-personal-blog/static/css/main.ccb766c7.css",
+    "main.js": "/my-personal-blog/static/js/main.a46b6118.js",
+    "static/media/omu.jpeg": "/my-personal-blog/static/media/omu.bafb5dcbf02b45189462.jpeg",
+    "static/media/cat.jpeg": "/my-personal-blog/static/media/cat.6c8c7fedbd79376f1f4f.jpeg",
+    "static/media/fitness_first.jpeg": "/my-personal-blog/static/media/fitness_first.d56c64335908cf2f7f96.jpeg",
+    "static/media/myself.jpeg": "/my-personal-blog/static/media/myself.e2adae320336294c14e3.jpeg",
+    "index.html": "/my-personal-blog/index.html",
+    "main.ccb766c7.css.map": "/my-personal-blog/static/css/main.ccb766c7.css.map",
+    "main.a46b6118.js.map": "/my-personal-blog/static/js/main.a46b6118.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccb766c7.css",
+    "static/js/main.a46b6118.js"
+  ]
+}
