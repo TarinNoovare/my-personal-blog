@@ -6,7 +6,7 @@ function TagPillsContainer() {
     "DataSci",
     "Coding",
     "Stats",
-    "Shitpost",
+    "Meme",
     "ML",
     "React",
     "Life & Work",

@@ -1,3 +1,8 @@
+.tag-pills-container {
+    text-align: center;
+    padding: 10px;
+}
+
 .tag-pill {
     background-color: #eff4ff;
     border: none;
