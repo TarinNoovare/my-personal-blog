@@ -1,13 +1,27 @@
-import "./FilterYearsBar.css"
+import "./FilterYearsBar.css";
 
-function FilterYearsBar() {
+function FilterYearsBar(props) {
+  function onlyUniqueYear(value, index, self) {
+    return self.indexOf(value) === index;
+  }
+  const listOfYears = props.blogsItemDict
+    .map((em) => em.blogDatetime.slice(0, 4))
+    .filter(onlyUniqueYear)
+    .sort();
+
+  listOfYears.unshift("All");
+
+  const listOfYearsDropDown = listOfYears.map((em) => (
+    <option value={em}>{em}</option>
+  ));
+
+  const onYearFilterChange = (event) => {
+    props.onYearBlogsFilterChange(event.target.value);
+  };
+
   return (
-    <div>
-      <select>
-        <option value="tesla">Tesla</option>
-        <option value="volvo">Volvo</option>
-        <option value="mercedes">Mercedes</option>
-      </select>
+    <div className="filter-years-dropdown">
+      <select onChange={onYearFilterChange}>{listOfYearsDropDown}</select>
     </div>
   );
 }

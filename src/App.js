@@ -3,6 +3,8 @@ import TagPillsContainer from "./components/TagsBar/TagPillsContainer";
 import BlogsContainer from "./components/MainBlogCards/BlogsContainer";
 import FilterYearsBar from "./components/FilterYears/FilterYearsBar";
 
+import { useState } from "react";
+
 function App() {
   const blogsItemDict = [
     {
@@ -44,7 +46,21 @@ function App() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       blogDatetime: "2021-12-15",
     },
+    {
+      id: 6,
+      blogHeader: "Omu Rice",
+      pictureSourcePath: require("./resources/omu.jpeg"),
+      blogDescription:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      blogDatetime: "2020-02-15",
+    },
   ];
+
+  const filterBlogYear = (year) => {
+    setYearBlogs(year);
+  };
+
+  const [yearBlogs, setYearBlogs ]= useState("All");
 
   return (
     <div className="App">
@@ -54,8 +70,11 @@ function App() {
         <TagPillsContainer />
       </header>
       <main className="main-box-container">
-        <FilterYearsBar />
-        <BlogsContainer blogsItemDict={blogsItemDict} />
+        <FilterYearsBar
+          blogsItemDict={blogsItemDict}
+          onYearBlogsFilterChange={filterBlogYear}
+        />
+        <BlogsContainer blogsItemDict={blogsItemDict} filterYear={yearBlogs}/>
       </main>
     </div>
   );
