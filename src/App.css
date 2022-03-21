@@ -23,3 +23,8 @@
     margin-top: 0px;
     text-align: center;
 }
+
+.main-box-container {
+    display: flex;
+    flex-direction: column;
+}
