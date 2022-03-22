@@ -1,4 +1,6 @@
 .filter-years-dropdown {
     margin-right: 10px;
     align-self: flex-end;
+    display: flex;
+    gap: 10px;
 }

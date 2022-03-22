@@ -21,6 +21,7 @@ function FilterYearsBar(props) {
 
   return (
     <div className="filter-years-dropdown">
+      <label>Filter by Year</label>
       <select onChange={onYearFilterChange}>{listOfYearsDropDown}</select>
     </div>
   );
