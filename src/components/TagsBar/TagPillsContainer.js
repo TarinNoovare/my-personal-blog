@@ -1,37 +1,49 @@
 import "./TagPillsContainer.css";
+import { useState } from "react";
 
 function TagPillsContainer() {
-  const tagsPillList = [
-    "Travel",
-    "DataSci",
-    "Coding",
-    "Stats",
-    "Meme",
-    "ML",
-    "React",
-    "Life & Work",
-    "Books",
-    "P-value",
-    "Bruh",
-  ];
-  const tagsPillListComponent = [];
+  const [selectedTagsPillList, setSelectedTagsPillList] = useState({
+    Books: "selected",
+    Bruh: "selected",
+    Coding: "selected",
+    DataSci: "selected",
+    "Life & Work": "selected",
+    Meme: "selected",
+    ML: "selected",
+    "P-value": "selected",
+    React: "selected",
+    Stats: "selected",
+    Travel: "selected",
+  });
 
-  const onTagButtonClickHandler = (event) => {
-    console.log(event.target.value);
+  const onTagPillSelect = (event) => {
+    // console.log(event.target.value);
+    const tagName = event.target.value;
+    const tagStatus = selectedTagsPillList[tagName];
+    const tagNewStatus = tagStatus === "selected" ? "non-selected" : "selected";
+
+    setSelectedTagsPillList((prevState) => {
+      return {
+        ...prevState,
+        [tagName]: tagNewStatus,
+      };
+    });
   };
 
-  tagsPillList.forEach((tag) =>
+  const tagsPillListComponent = [];
+  for (let key in selectedTagsPillList) {
+    const isPillShow = selectedTagsPillList[key] === "selected";
     tagsPillListComponent.push(
       <button
         className="tag-pill"
-        value={tag}
-        onClick={onTagButtonClickHandler}
+        style={{ opacity: isPillShow ? "100%" : "35%" }}
+        value={key}
+        onClick={onTagPillSelect}
       >
-        {tag}
+        {key}
       </button>
-    )
-  );
-
+    );
+  }
   return <div className="tag-pills-container">{tagsPillListComponent}</div>;
 }
 
