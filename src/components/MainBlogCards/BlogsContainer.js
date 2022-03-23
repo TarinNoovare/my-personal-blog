@@ -15,6 +15,7 @@ function BlogsContainer(props) {
       <article
         className="blog-card"
         style={{ display: isCardShow ? "flex" : "none" }}
+        key={blog.id}
       >
         <div className="blog-card__picture">
           <img src={blog.pictureSourcePath} alt={blog.blogHeader} />

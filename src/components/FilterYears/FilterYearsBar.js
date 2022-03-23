@@ -12,7 +12,7 @@ function FilterYearsBar(props) {
   listOfYears.unshift("All");
 
   const listOfYearsDropDown = listOfYears.map((em) => (
-    <option value={em}>{em}</option>
+    <option value={em} key={em}>{em}</option>
   ));
 
   const onYearFilterChange = (event) => {
