@@ -2,7 +2,8 @@ import "./TagPillsContainer.css";
 import { useState } from "react";
 
 function TagPillsContainer() {
-  // TODO: Fix pill components to each has unique key property
+
+  // TODO: Edit tags data type to also save theirs unique ID
   const [selectedTagsPillList, setSelectedTagsPillList] = useState({
     Books: "selected",
     Bruh: "selected",
@@ -16,6 +17,8 @@ function TagPillsContainer() {
     Stats: "selected",
     Travel: "selected",
   });
+
+
 
   const onTagPillSelect = (event) => {
     const tagName = event.target.value;
@@ -31,6 +34,7 @@ function TagPillsContainer() {
   };
 
   const tagsPillListComponent = [];
+  let tagIndex = 0;
   for (let key in selectedTagsPillList) {
     const isPillShow = selectedTagsPillList[key] === "selected";
     tagsPillListComponent.push(
@@ -38,11 +42,14 @@ function TagPillsContainer() {
         className="tag-pill"
         style={{ opacity: isPillShow ? "100%" : "35%" }}
         value={key}
+        key={tagIndex}
         onClick={onTagPillSelect}
       >
         {key}
       </button>
     );
+
+    tagIndex += 1;
   }
   return <div className="tag-pills-container">{tagsPillListComponent}</div>;
 }

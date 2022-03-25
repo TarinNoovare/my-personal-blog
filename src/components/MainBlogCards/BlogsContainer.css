@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    /* TODO: Set picture to blend in with radius of the box
+     border-radius: 10px; */
 }
 
 .blog-card__picture {

@@ -8,14 +8,6 @@ const DUMMY_BLOG_ITEMS = [
     blogDatetime: "2018-01-01",
   },
   {
-    id: 1,
-    blogHeader: "Black Cat",
-    pictureSourcePath: require("./cat.jpeg"),
-    blogDescription:
-      "Picture of a black cat wearing a motorcycle taxi trying to earn for his meal.",
-    blogDatetime: "2021-01-01",
-  },
-  {
     id: 2,
     blogHeader: "Myself",
     pictureSourcePath: require("./myself.jpeg"),
@@ -36,15 +28,7 @@ const DUMMY_BLOG_ITEMS = [
     pictureSourcePath: require("./omu.jpeg"),
     blogDescription: "My First Japanese-like Omu Rice at Central World. Yum!!",
     blogDatetime: "2023-02-01",
-  },
-  {
-    id: 5,
-    blogHeader: "Omu Rice",
-    pictureSourcePath: require("./omu.jpeg"),
-    blogDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    blogDatetime: "2021-12-15",
-  },
+  }
 ];
 
 export { DUMMY_BLOG_ITEMS };
