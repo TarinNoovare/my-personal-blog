@@ -1,5 +1,4 @@
 import "./BlogsContainer.css";
-import { useState } from "react";
 
 function BlogsContainer(props) {
   const blogsItemDict = props.blogsItemDict;
