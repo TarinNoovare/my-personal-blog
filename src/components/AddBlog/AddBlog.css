@@ -1,0 +1,20 @@
+.blog-forms {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.blog-form-containter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-form-button {
+    align-self: flex-end;
+    justify-self: flex-end;
+    display: flex;
+    gap: 20px;
+}

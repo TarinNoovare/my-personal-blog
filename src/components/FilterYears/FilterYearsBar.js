@@ -4,12 +4,14 @@ function FilterYearsBar(props) {
   function onlyUniqueYear(value, index, self) {
     return self.indexOf(value) === index;
   }
+
   const listOfYears = props.blogsItemDict
     .map((em) => em.blogDatetime.slice(0, 4))
     .filter(onlyUniqueYear)
     .sort();
 
   listOfYears.unshift("All");
+
 
   const listOfYearsDropDown = listOfYears.map((em) => (
     <option value={em} key={em}>{em}</option>

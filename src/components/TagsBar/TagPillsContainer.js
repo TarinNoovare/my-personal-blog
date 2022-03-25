@@ -2,6 +2,7 @@ import "./TagPillsContainer.css";
 import { useState } from "react";
 
 function TagPillsContainer() {
+  // TODO: Fix pill components to each has unique key property
   const [selectedTagsPillList, setSelectedTagsPillList] = useState({
     Books: "selected",
     Bruh: "selected",
@@ -17,7 +18,6 @@ function TagPillsContainer() {
   });
 
   const onTagPillSelect = (event) => {
-    // console.log(event.target.value);
     const tagName = event.target.value;
     const tagStatus = selectedTagsPillList[tagName];
     const tagNewStatus = tagStatus === "selected" ? "non-selected" : "selected";
